@@ -6,6 +6,7 @@
 
 %TMPL:DEF{"ModacMailContents"}%
 %MAKETEXT{"[_1] changed the following meta fields of topic [_2]" arg1="%METACHANGED_ACTOR%" arg2="%METACHANGED_TITLE%"}%:
+
 %METACHANGED_CHANGED_FIELDS%
 
 %METACHANGED_CHANGED_LINK%

@@ -32,9 +32,10 @@ sub initPlugin {
 
 sub afterSaveHandler {
   my ($text, $topic, $web, $error, $meta) = @_;
-
   my $ctx = Foswiki::Func::getContext();
   my $approvedOnly = Foswiki::Func::getPreferencesValue('NOTIFYMETACHANGED_APPROVED_ONLY');
+  $approvedOnly = 1 unless defined $approvedOnly;
+
   my $kvpIsDiscussion = $ctx->{'KVPIsDiscussion'} || 0;
   return if $approvedOnly && $kvpIsDiscussion;
 
@@ -96,7 +97,7 @@ sub afterSaveHandler {
       $curChange = $meta->expandMacros("%RENDERUSER{\"$curChange\" convert=\"on\"}%");
     }
 
-    push @changes, "%MAKETEXT{\"$fname\"}%: $prevChange -> $curChange";
+    push @changes, "%MAKETEXT{\"$fname\"}%: %MAKETEXT{\"from\"}% $prevChange %MAKETEXT{\"to\"}% $curChange";
   }
   return unless scalar(@changes);
 
