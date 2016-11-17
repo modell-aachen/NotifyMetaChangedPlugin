@@ -32,12 +32,12 @@ sub initPlugin {
 
 sub afterSaveHandler {
   my ($text, $topic, $web, $error, $meta) = @_;
+
   my $ctx = Foswiki::Func::getContext();
+  my $kvpIsApproved = $meta->expandMacros('%GETWORKFLOWROW{"approved"}%');
   my $approvedOnly = Foswiki::Func::getPreferencesValue('NOTIFYMETACHANGED_APPROVED_ONLY');
   $approvedOnly = 1 unless defined $approvedOnly;
-
-  my $kvpIsDiscussion = $ctx->{'KVPIsDiscussion'} || 0;
-  return if $approvedOnly && $kvpIsDiscussion;
+  return if $approvedOnly && !$kvpIsApproved;
 
   my $it = $meta->getRevisionHistory();
   my $prevRev;
