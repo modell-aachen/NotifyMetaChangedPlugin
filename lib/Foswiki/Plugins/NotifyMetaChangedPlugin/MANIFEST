@@ -1,0 +1,4 @@
+data/System/NotifyMetaChangedPlugin.txt 0644
+data/System/NotifyMetaChangedMailTemplate.txt 0644
+lib/Foswiki/Plugins/NotifyMetaChangedPlugin.pm 0444
+locale/NotifyMetaChangedPlugin/de.po 0444
