@@ -1,0 +1,1 @@
+Foswiki::Plugins,>=2.1,perl,Requires version 2.0 of handler API.
