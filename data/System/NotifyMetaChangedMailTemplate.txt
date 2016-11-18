@@ -1,7 +1,6 @@
 %TMPL:INCLUDE{"mailtemplatescontrib"}%
 
 %TMPL:DEF{"ModacMailTo"}%%METACHANGED_MAIL_TO%%TMPL:END%
-%TMPL:DEF{"ModacMailCc"}%%METACHANGED_MAIL_CC%%TMPL:END%
 %TMPL:DEF{"ModacMailFrom"}%%TMPL:P{"ModacNoReply"}%%TMPL:END%
 %TMPL:DEF{"ModacMailSubject"}%[%WIKITOOLNAME%] %MAKETEXT{"Topic changed"}%%TMPL:END%
 

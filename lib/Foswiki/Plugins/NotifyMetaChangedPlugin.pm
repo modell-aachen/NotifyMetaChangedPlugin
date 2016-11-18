@@ -103,9 +103,7 @@ sub afterSaveHandler {
 
   my @to = ($curRecipient, $prevRecipient);
   @to = grep {!$_ || $_ =~ /^\s*$/ ? undef : $_} @to;
-
-  Foswiki::Func::setPreferencesValue('METACHANGED_MAIL_TO', $to[0]);
-  Foswiki::Func::setPreferencesValue('METACHANGED_MAIL_CC', $to[1]) if scalar(@to) > 1;
+  Foswiki::Func::setPreferencesValue('METACHANGED_MAIL_TO', join(',', @to));
 
   my $title = "$web.$topic";
   my $titleField = $meta->get('FIELD', 'TopicTitle');
