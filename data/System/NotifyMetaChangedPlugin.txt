@@ -1,0 +1,27 @@
+%META:TOPICPARENT{name="Plugins"}%
+---+ !NotifyMetaChangedPlugin
+%SHORTDESCRIPTION%
+
+---++ Installation
+%$INSTALL_INSTRUCTIONS%
+
+---++ Configuration
+=NotifyMetaChangedPlugin= can be configured using the following preferences:
+| *Key* | *Default Value* | *Description* |
+| NOTIFYMETACHANGED_APPROVED_ONLY | 1 | Only monitor approved topics (KVP) |
+| NOTIFYMETACHANGED_MONITORED_FIELDS | Responsible | Comma-separated list of form field names to monitor |
+| NOTIFYMETACHANGED_RECIPIENT_FIELD | Responsible | Form field name of type user from which to build the recipients list (mail notification) |
+
+*Note* %BR%
+The preferences listed above (and their default values) were enabled by
+=DefaultPreferencesPlugin= within your [[Main.SitePreferences]].
+
+---++ Plugin Info
+
+| Author: | Modell Aachen !GmbH |
+| Copyright: | &copy; 2016, Modell Aachen !GmbH |
+| License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+| Release: | %$RELEASE% |
+| Version: | %$VERSION% |
+| Home: | http://www.modell-aachen.de |
+| Support: | http://www.modell-aachen.de |
